@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #ff9800;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .photo {
+      flex: 1 1 300px;
+      max-width: 400px;
+      background: #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      padding: 15px;
+      text-align: center;
+      background: #2a2a2a;
+    }
+
+    .caption h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #ff9800;
+    }
+
+    .caption p {
+      margin: 10px 0 0;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #ff9800;
+      color: #111;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: #e68900;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-button">⬅ Inicio</a>
+  <header>
+    <h1>Photos</h1>
+  </header>
+  <main>
+    <div class="gallery" id="gallery"></div>
+  </main>
+
+  <script>
+    async function loadPhotos() {
+      try {
+        const response = await fetch("photos.json");
+        const photos = await response.json();
+
+        const gallery = document.getElementById("gallery");
+        photos.forEach(photo => {
+          const photoDiv = document.createElement("div");
+          photoDiv.classList.add("photo");
+
+          photoDiv.innerHTML = `
+            <img src="${photo.image}" alt="${photo.title}">
+            <div class="caption">
+              <h3>${photo.title}</h3>
+              <p>${photo.description}</p>
+            </div>
+          `;
+
+          gallery.appendChild(photoDiv);
+        });
+      } catch (error) {
+        console.error("Error al cargar las fotos:", error);
+      }
+    }
+
+    loadPhotos();
+  </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro Ospina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="stars"></div>
+
+<header class="perfil">
+  <div class="perfil-container">
+    <!-- Imagen -->
+    <img src="IMG/Avatar.png" alt="Foto de perfil" class="perfil-img">
+
+    <!-- Info -->
+    <div class="perfil-info">
+      <h1>Alejandro Ospina</h1>
+      <p><em>Explorador de ideas 🚀</em></p>
+    </div>
+
+    <!-- Nuevo título -->
+    <div class="perfil-extra">
+      <h2>📂 Portafolio</h2>
+    </div>
+  </div>
+</header>
+
+<!-- Status -->
+<div class="status-box online" id="statusBox">● Online</div>
+
+<!-- Botón de menú -->
+<div class="menu-container">
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+  <nav class="menu hidden" id="menu">
+    <ul>
+      <li>👋 <a href="#hello">Hello</a></li>
+      <li>📝 <a href="posts.html">Posts</a></li>
+      <li>📸 <a href="photos.html">Photos</a></li>
+      <li>📚 <a href="reads.html">Reads</a></li>
+      <li>🎬 <a href="watches.html">Watches</a></li>
+      <li>🎧 <a href="listens.html">Listens</a></li>
+      <li>🔗 <a href="links.html">Links</a></li>
+      <li>📡 <a href="status.html">Status</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- ===== CONTENIDO PRINCIPAL ===== -->
+<main>
+  <section id="hello" class="content">
+    <h2>¡Hola!</h2>
+    <p>
+      Soy Samuel. Me interesa el software libre, el rugby, la cumbia y la vida tranquila.  
+      Aquí escribo en el blog, comparto enlaces, fotos y notas. Actualmente...
+    </p>
+  </section>
+
+  <!-- ===== TARJETAS: What I Read / Watch / Listen ===== -->
+  <section class="cards" aria-label="What I read watch listen">
+    <!-- Leyendo -->
+    <article class="card">
+      <h3>📖 Leyendo</h3>
+      <img src="IMG/Libro.png" alt="Portada El Amor en los Tiempos del Cólera">
+      <p class="card-item"><strong>El Amor en los Tiempos del Cólera</strong><br>
+        Gabriel García Márquez</p>
+      <p class="card-note"><a href="reads.html">Ver más lecturas</a></p>
+    </article>
+
+    <!-- Viendo -->
+    <article class="card">
+      <h3>📺 Viendo</h3>
+      <img src="IMG/Serie.png" alt="The Walking Dead Temporada 2" class="mini-img">
+      <p class="card-item"><strong>The Walking Dead</strong><br>
+        Temporada 2 · Episodio 8</p>
+      <p class="card-note"><a href="watches.html">Ver más series</a></p>
+    </article>
+
+    <!-- Escuchando -->
+    <article class="card">
+      <h3>🎵 Escuchando </h3>
+      <img src="IMG/Musica.png" alt="1994 - Ryan Castro">
+      <p class="card-item"><strong>1994</strong><br>
+        Ryan Castro</p>
+      <p class="card-note"><a href="listens.html">Ver playlists</a></p>
+    </article>
+  </section> <!-- 👈 CIERRO AQUÍ las tarjetas -->
+
+  <!-- ===== POSTS (fuera de las tarjetas) ===== -->
+  <section class="post-cta">
+    <div class="card post-card">
+      <h3>📌 Mis Publicaciones</h3>
+      <p>Aquí comparto lo que hago, pienso y disfruto.</p>
+      <button class="btn" onclick="location.href='posts.html'">👉 Ver Posts</button>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="contact-card">
+    <div class="contact-content">
+      <p>📧 <strong>Contact:</strong> <a href="mailto:correo@ejemplo.com">samuelmadrigal@gmail.com</a></p>
+      <p>📡 <a href="#">Subscribe</a> · <a href="#">Instagram</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Columna 1 -->
+    <div class="footer-info">
+      <h3>Alejandro Ospina</h3>
+      <p>Autodidacta 🎧 Rock 'n Roll</p>
+      <p>© 2025 - Hecho con ❤️ y ☕</p>
+    </div>
+
+    <!-- Columna 2 -->
+    <div class="footer-links">
+      <h4>Secciones</h4>
+      <ul>
+        <li><a href="blog.html">📝 Blog</a></li>
+        <li><a href="photos.html">📸 Fotos</a></li>
+        <li><a href="reads.html">📚 Lecturas</a></li>
+        <li><a href="listens.html">🎧 Música</a></li>
+        <li><a href="links.html">🔗 Enlaces</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3 -->
+    <div class="footer-social">
+      <h4>Conéctate</h4>
+      <div class="icons">
+        <a href="#"><span>🐦</span></a>
+        <a href="#"><span>💼</span></a>
+        <a href="#"><span>📸</span></a>
+        <a href="#"><span>🎥</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

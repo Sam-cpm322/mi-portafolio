@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Mi primer post",
+    "contenido": "Este es un ejemplo de cómo se verán tus publicaciones con imágenes locales.",
+    "fecha": "29 de septiembre de 2025",
+    "imagen": "img/post1.jpg"
+  },
+  {
+    "titulo": "Segundo post",
+    "contenido": "También puedes agregar más entradas con fotos, ideas o reflexiones.",
+    "fecha": "28 de septiembre de 2025",
+    "imagen": "img/post2.jpg"
+  },
+  {
+    "titulo": "Tercer post",
+    "contenido": "¡Este es un nuevo post cargado desde JSON con imagen incluida!",
+    "fecha": "27 de septiembre de 2025",
+    "imagen": "img/post3.jpg"
+  }
+]

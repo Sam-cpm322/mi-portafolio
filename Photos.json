@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Conociendo Amigos",
+    "date": "2025-04-12",
+    "image": "IMG/Mexico.jpg"
+  },
+  {
+    "title": "Concierto",
+    "date": "2025-09-25",
+    "image": "img/concierto.jpg"
+  },
+  {
+    "title": "Cielos azules",
+    "date": "2025-09-20",
+    "image": "img/cielo.jpg"
+  },
+  {
+    "title": "Mi gato",
+    "date": "2025-09-15",
+    "image": "img/gato.jpg"
+  },
+  {
+    "title": "Montaña",
+    "date": "2025-09-10",
+    "image": "img/montana.jpg"
+  },
+  {
+    "title": "Vista al mar",
+    "date": "2025-09-05",
+    "image": "img/playa.jpg"
+  }
+]
